@@ -26,12 +26,14 @@ public class WorldTeleporter : MonoBehaviour
     [Header("VFX")]
     public GameObject teleportParticles;
     public UnityEvent OnTeleport;
+    AudioSource audioData;
 
     private UnityAction<int> teleport;
 
     private void Awake()
     {
         LanguageManager.OnLanguageChange += ConfigureTeleportLocations;
+        audioData = GetComponent<AudioSource>();
     }
 
     private void OnDestroy()
@@ -83,7 +85,7 @@ public class WorldTeleporter : MonoBehaviour
             dropdown.captionText.text = LanguageManager.GetText("menu_teleport");
 
             OnTeleport.Invoke();
-
+            audioData.Play(0);
             //Spawn particles at the new position
             if (teleportParticles != null)
             {
