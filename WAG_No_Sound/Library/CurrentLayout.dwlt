@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 59
+  controlID: 136
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 60
+  controlID: 65
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 61
+  controlID: 66
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,8 +210,8 @@ MonoBehaviour:
     y: 0
     width: 1200
     height: 572
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 12}
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -380,9 +380,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b0980300
-      m_LastClickedID: 235696
-      m_ExpandedIDs: 7ee1fdffe64efeff2851feff6653feff1e56feff2458feff5259feff3c5afeffbe5afeff725cfeff0666feffb662ffffa68dffff0eddffff50dfffff8ee1ffff46e4ffff08e6ffff4ee6ffff7ce7ffffa6e7ffff66e8ffff78e8ffffdee8ffffe8e8ffff9ceaffff30f4ffffd6fbffffa8570000465a00001c620000ea6400005e6f0000f26f0000
+      m_SelectedIDs: 807cffff
+      m_LastClickedID: -33664
+      m_ExpandedIDs: 1a7fffffb6e4fffff8e6ffff36e9ffffeeebfffff4edffff22efffff0cf0ffff8ef0ffffd6fbffff4a2e0000242f00005e31000098390000663c0000183f0000de4600002e4a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -436,11 +436,11 @@ MonoBehaviour:
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
-  m_AudioPlay: 1
+  m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -228.21193, y: 482.66486, z: -336.41174}
+    m_Target: {x: -254.51457, y: 36.43869, z: -10.344162}
     speed: 2
-    m_Value: {x: -228.21193, y: 482.66486, z: -336.41174}
+    m_Value: {x: -254.51457, y: 36.43869, z: -10.344162}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -468,13 +468,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.47599494, y: -0.07921943, z: 0.043104474, w: -0.87481153}
+    m_Target: {x: 0.4675206, y: 0.23768517, z: -0.1321135, w: 0.8411161}
     speed: 2
-    m_Value: {x: -0.47599497, y: -0.07921943, z: 0.043104477, w: -0.87481153}
+    m_Value: {x: 0.4675206, y: 0.23768517, z: -0.1321135, w: 0.8411161}
   m_Size:
-    m_Target: 0.71371335
+    m_Target: 128.2217
     speed: 2
-    m_Value: 0.71371335
+    m_Value: 128.2217
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -522,22 +522,22 @@ MonoBehaviour:
     m_ReferencingInstanceIDs: 
     m_SceneHandles: 
     m_ShowAllHits: 0
-    m_SearchArea: 1
+    m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes/Game Scenes
+    - Assets/Audio/SFX/Ambient/Ambient_Background
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes/Game Scenes
+  - Assets/Audio/SFX/Ambient/Ambient_Background
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\propietario\Documents\GitHub\UnityAudioExercises\WAG_No_Sound
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a240000
-    m_LastClickedID: 9354
-    m_ExpandedIDs: 000000001a130000f41c0000621e0000401f000094220000022300008a240000ca250000002700004a54000000ca9a3b
+    scrollPos: {x: 0, y: 34}
+    m_SelectedIDs: 0c190000
+    m_LastClickedID: 6412
+    m_ExpandedIDs: 000000001a1300005013000080160000621e0000401f0000942200008a240000a2240000ca25000000270000c69b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -565,7 +565,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a130000f41c0000621e0000401f00009422000002230000a42300008a240000ca250000002700005a2800004a540000
+    m_ExpandedIDs: 000000001a130000f41c0000621e0000401f000094220000022300008a240000ca25000000270000c69b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,18 +596,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 80250000ca4500000000000040310000322f00005a3100006a2f0000f678000036830000c88a0000f0810000b888000092730000986b00009a810000427d0000ec760000d05a0000ac34000034700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: DayNightCycle
+      m_OriginalName: DayNightCycle
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 3462
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -617,7 +617,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 193}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 259
 --- !u!114 &16

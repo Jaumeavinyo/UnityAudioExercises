@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\Cheats\BigHeadCheatObject.cs" />
     <Compile Include="Assets\Scripts\Combat\Attack.cs" />
     <Compile Include="Assets\Scripts\Combat\Weapon.cs" />
+    <Compile Include="Assets\Scripts\DayNightSwitch.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\LoadSoundBankByName.cs" />
