@@ -54,6 +54,19 @@ public class QuestManager : Singleton<QuestManager>
 
     public bool showQuestBarInfo = false;
 
+    public AudioClip Open;
+    public AudioClip Close;
+
+    private AudioSource source { get { return GetComponent<AudioSource>(); } }
+
+    private void Start()
+    {
+        gameObject.AddComponent<AudioSource>();
+        source.clip = Close;
+        source.playOnAwake = false;
+
+    }
+
     void Awake()
     {
         QuestItems = new List<QuestItemInfo>();

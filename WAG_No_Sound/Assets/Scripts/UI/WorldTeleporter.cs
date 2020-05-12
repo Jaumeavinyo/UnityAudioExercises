@@ -30,10 +30,16 @@ public class WorldTeleporter : MonoBehaviour
 
     private UnityAction<int> teleport;
 
+    private void Start()
+    {
+        audioData = GetComponent<AudioSource>();
+        audioData.playOnAwake = false;
+    }
+
     private void Awake()
     {
         LanguageManager.OnLanguageChange += ConfigureTeleportLocations;
-        audioData = GetComponent<AudioSource>();
+       
     }
 
     private void OnDestroy()

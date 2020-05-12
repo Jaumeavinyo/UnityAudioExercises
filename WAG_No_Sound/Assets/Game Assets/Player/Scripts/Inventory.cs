@@ -77,7 +77,20 @@ public class Inventory : MonoBehaviour
     private Image MarkerImage_Row2;
     private Image MarkerImage_Row3;
     #endregion
+    public AudioClip Close;
+    public AudioClip Open;
+    public AudioClip Scroll;
+    public AudioClip Select;
 
+    private AudioSource source { get { return GetComponent<AudioSource>(); } }
+
+    private void Start()
+    {
+       gameObject.AddComponent<AudioSource>();
+       source.clip = Close;
+       source.playOnAwake = false;
+       
+    }
     private void OnDestroy()
     {
         InputManager.OnInventoryDown -= OpenInventory;
@@ -219,6 +232,8 @@ public class Inventory : MonoBehaviour
 
         for (int i = (int)WheelDimensions.x; i < (int)WheelDimensions.y && invRef.Count > 0; i++)
         {
+            source.clip = Scroll;
+            source.Play(0);
             int c = 0;
             if (i > 1)
             {
@@ -710,13 +725,19 @@ public class Inventory : MonoBehaviour
     {
         if (!Menu.isOpen && DialogueManager.Instance.Dialogue.Count < 1 && !InventoryIsOut)
         {
+            source.clip = Open;
+            source.Play(0);
             canvasGroup.interactable = true;
             InventoryOpenedSound.Post(gameObject);
             InventoryIsOut = true;
             if (EventSystem.current != null)
             {
+                
                 EventSystem.current.SetSelectedGameObject(SelectedGameobject);
                 SelectedGameobject.GetComponent<Button>().Select();
+                source.clip = Select;
+                source.Play(0);
+
             }
 
             GameManager.Instance.gameSpeedHandler.PauseGameSpeed(gameObject.GetInstanceID());
@@ -732,6 +753,9 @@ public class Inventory : MonoBehaviour
     {
         if (InventoryIsOut)
         {
+            source.clip = Close;
+            source.Play(0);
+
             canvasGroup.interactable = false;
             InventoryClosedSound.Post(gameObject);
             InventoryIsOut = false;
@@ -756,10 +780,12 @@ public class Inventory : MonoBehaviour
     {
         if (CanPressRights[SelectedRow])
         {
+          
             ButtonIncrement(SelectedRow);
         }
         else
         {
+
             print("Inventory: No Inventory Items to the right");
         }
     }
@@ -767,6 +793,7 @@ public class Inventory : MonoBehaviour
     {
         if (CanPressLefts[SelectedRow])
         {
+           
             InversedIncrement(SelectedRow);
         }
         else

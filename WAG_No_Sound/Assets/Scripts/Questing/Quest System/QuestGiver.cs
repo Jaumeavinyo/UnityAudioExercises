@@ -33,8 +33,17 @@ namespace QuestSystem
         private IEnumerator interactionRoutine;
         #endregion
 
+        public AudioClip Complete;
+        public AudioClip Give;
+
+        private AudioSource source { get { return GetComponent<AudioSource>(); } }
+
+      
         private void Start()
         {
+            gameObject.AddComponent<AudioSource>();
+            source.clip = Complete;
+            source.playOnAwake = false;
             if (StartQuestLineOnStart)
             {
                 InitializeQuest(currentQuestIdx);
@@ -52,8 +61,9 @@ namespace QuestSystem
             Quest currentQuest = Quests[questIdx];
             yield return currentQuest.InitializeQuest();
             currentQuest.OnQuestComplete += AdvanceQuestLine;
-            SetDialogue(currentQuest.GetDialogue()); 
-
+            SetDialogue(currentQuest.GetDialogue());
+            source.clip = Give;
+            source.Play(0);
             if (OnNewQuest != null)
             {
                 OnNewQuest(currentQuest);
@@ -94,6 +104,8 @@ namespace QuestSystem
                 QuestlineCompleteEvent.Post(gameObject);
                 if (OnQuestlineComplete != null)
                 {
+                    source.clip = Complete;
+                    source.Play(0);
                     OnQuestlineComplete(this);
                 }
             }

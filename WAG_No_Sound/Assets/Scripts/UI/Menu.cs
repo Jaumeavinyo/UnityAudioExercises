@@ -29,6 +29,19 @@ public class Menu : MonoBehaviour
 
     private bool menuOpen = false;
 
+    public AudioClip Open;
+    public AudioClip Close;
+
+    private AudioSource source { get { return GetComponent<AudioSource>(); } }
+
+    private void Start()
+    {
+        gameObject.AddComponent<AudioSource>();
+        source.clip = Open;
+        source.playOnAwake = false;
+
+    }
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) && GetMouseWithP) {
@@ -54,6 +67,8 @@ public class Menu : MonoBehaviour
             isOpen = menuOpen;
             if (menuOpen)
             {
+                source.clip = Open;
+                source.Play(0);
                 MenuOpenSound.Post(gameObject);
                 MenuRTPC.SetGlobalValue(100f);
                 GameManager.Instance.gameSpeedHandler.PauseGameSpeed(gameObject.GetInstanceID());
@@ -67,6 +82,8 @@ public class Menu : MonoBehaviour
             }
             else
             {
+                source.clip = Close;
+                source.Play(0);
                 MenuCloseSound.Post(gameObject);
                 MenuRTPC.SetGlobalValue(0f);
                 GameManager.Instance.gameSpeedHandler.UnPauseGameSpeed(gameObject.GetInstanceID());
