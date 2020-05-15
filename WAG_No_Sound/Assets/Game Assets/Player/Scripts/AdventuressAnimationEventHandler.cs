@@ -86,7 +86,32 @@ public class AdventuressAnimationEventHandler : MonoBehaviour
                 if (side == FootSide.left )
                 {
                     if (foot_L.FootstepSound.Validate())
-                    { 
+                    {
+                        int rnumber = Random.Range(0, 6);
+                        if (rnumber > 0 && rnumber <= 1)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_1");
+                        }
+                        else if(rnumber > 1 && rnumber <= 2)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_2");
+                        }
+                        else if (rnumber > 2 && rnumber <= 3)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_3");
+                        }
+                        else if (rnumber > 3 && rnumber <= 4)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_4");
+                        }
+                        else if (rnumber > 4 && rnumber <= 5)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_5");
+                        }
+                        else if (rnumber > 5 && rnumber <= 6)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_6");
+                        }
                         foot_L.PlayFootstepSound();
                         particlePosition = foot_L.transform.position;
                         FootstepParticles(particlePosition);
@@ -96,6 +121,31 @@ public class AdventuressAnimationEventHandler : MonoBehaviour
                 {
                     if (foot_R.FootstepSound.Validate())
                     {
+                        int rnumber = Random.Range(0, 6);
+                        if (rnumber > 0 && rnumber <= 1)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_1");
+                        }
+                        else if (rnumber > 1 && rnumber <= 2)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_2");
+                        }
+                        else if (rnumber > 2 && rnumber <= 3)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_3");
+                        }
+                        else if (rnumber > 3 && rnumber <= 4)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_4");
+                        }
+                        else if (rnumber > 4 && rnumber <= 5)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_5");
+                        }
+                        else if (rnumber > 5 && rnumber <= 6)
+                        {
+                            FindObjectOfType<AudioManager>().Play("Dirt_walk_6");
+                        }
                         foot_R.PlayFootstepSound();
                         particlePosition = foot_R.transform.position;
                         FootstepParticles(particlePosition);

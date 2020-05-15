@@ -16,8 +16,11 @@ public class CoinPickup : MonoBehaviour {
 
 	void Start(){
         if (playSpawnSoundAtSpawn){
-            spawnSound.Post(gameObject);
-        }
+            //spawnSound.Post(gameObject);
+			GameObject audio = GameObject.Find("AudioManagerPlayer");
+			AudioManager manager = audio.GetComponent<AudioManager>();
+			manager.Play("Pick_up_Coin");
+		}
 	}
 
 	public void AddCoinToCoinHandler(){

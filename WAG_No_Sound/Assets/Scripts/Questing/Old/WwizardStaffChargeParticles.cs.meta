@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 40754d3691e154862b44c60592b9e35a
-timeCreated: 1484054405
-licenseType: Free
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lineRenderer: {instanceID: 0}
+  - endPoint: {instanceID: 0}
+  - chargeDoneParticles: {instanceID: 0}
+  - StartCharge: {instanceID: 0}
+  - EndCharge: {fileID: 8300000, guid: 7d313688a6eabd343960753eeeaa2160, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

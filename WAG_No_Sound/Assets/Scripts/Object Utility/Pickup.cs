@@ -193,6 +193,9 @@ public class Pickup : MonoBehaviour, IInteractable
 			{
 				
 				PickUpEvent.Post(gameObject);
+				GameObject audio = GameObject.Find("AudioManagerPlayer");
+				AudioManager manager = audio.GetComponent<AudioManager>();
+				manager.Play("Pick_up");
 			}
 			if (pickupParticles != null)
 			{

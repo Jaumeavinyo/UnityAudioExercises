@@ -236,6 +236,10 @@ public class Weapon : MonoBehaviour, IInteractable
         //WeaponTypeSwitch.SetValue(transform.parent.gameObject); // Weapon Type
         alreadyHitObjects.Add(HitObj);
         WeaponImpact.Post(transform.parent.gameObject);
+        GameObject audio = GameObject.Find("AudioManagerPlayer");
+        AudioManager manager = audio.GetComponent<AudioManager>();
+        manager.Play("Weapon_attack");
+
 
     }
 

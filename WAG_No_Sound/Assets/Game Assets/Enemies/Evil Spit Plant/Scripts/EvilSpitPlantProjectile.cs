@@ -24,12 +24,17 @@ public class EvilSpitPlantProjectile : MonoBehaviour
     public float damage = 40f;
 
     public bool ignoreCollisionWithWwizard = false;
+    private AudioSource sound { get { return GetComponent<AudioSource>(); } }
+    public AudioClip Impactsoundnew;
+    public AudioClip NoImpactsoundnew;
 
     [HideInInspector]
     public GameObject parent;
 
     public AK.Wwise.Event ImpactSound = new AK.Wwise.Event();
     public AK.Wwise.Event NoImpactSound = new AK.Wwise.Event();
+
+    
 
     #region private variables
     private Rigidbody rb;
@@ -38,6 +43,10 @@ public class EvilSpitPlantProjectile : MonoBehaviour
     private IEnumerator movementRoutine;
     #endregion
 
+    private void Start()
+    {
+        gameObject.AddComponent<AudioSource>();
+    }
     void OnEnable()
     {
         rb = GetComponent<Rigidbody>();
@@ -138,10 +147,14 @@ public class EvilSpitPlantProjectile : MonoBehaviour
             if (hitSomething)
             {
                 ImpactSound.Post(go.gameObject);
+                sound.clip = Impactsoundnew;
+                sound.Play();
             }
             else
             {
                 NoImpactSound.Post(go.gameObject);
+                sound.clip = NoImpactsoundnew;
+                sound.Play();
             }
 
             Destroy(go, 5f);
