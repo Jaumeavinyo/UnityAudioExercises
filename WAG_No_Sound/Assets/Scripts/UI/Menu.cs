@@ -30,14 +30,19 @@ public class Menu : MonoBehaviour
     private bool menuOpen = false;
 
     public AudioClip Open;
+    public AudioClip Opened;
     public AudioClip Close;
 
     private AudioSource source { get { return GetComponent<AudioSource>(); } }
+    
 
+  
     private void Start()
     {
+        
         gameObject.AddComponent<AudioSource>();
         source.clip = Open;
+        
         source.playOnAwake = false;
 
     }
@@ -68,6 +73,7 @@ public class Menu : MonoBehaviour
             if (menuOpen)
             {
                 source.clip = Open;
+        
                 source.Play(0);
                 MenuOpenSound.Post(gameObject);
                 MenuRTPC.SetGlobalValue(100f);
