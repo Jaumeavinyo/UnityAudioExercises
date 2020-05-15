@@ -105,8 +105,10 @@
     <Compile Include="Assets\Scripts\Combat\Attack.cs" />
     <Compile Include="Assets\Scripts\Combat\Weapon.cs" />
     <Compile Include="Assets\Scripts\DayNightSwitch.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\AudioCreditsScript.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\TitleScreenAudio.cs" />
     <Compile Include="Assets\Scripts\LoadSoundBankByName.cs" />
     <Compile Include="Assets\Scripts\Managers\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EventManager.cs" />
